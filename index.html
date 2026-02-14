@@ -6,75 +6,114 @@
 <title>추예진 | Backend Developer</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  color: #222;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  padding: 14px 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+/* ---------- SECTION ---------- */
 section {
   max-width: 900px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
+/* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding-top: 120px;
+  padding-top: 160px;
 }
 
-h1 {
-  font-size: 42px;
+.hero h1 {
+  font-size: 48px;
   margin-bottom: 10px;
 }
 
 .subtitle {
   color: #666;
+  font-size: 18px;
 }
 
-nav a {
-  margin: 0 10px;
-  color: #333;
-  text-decoration: none;
-}
-
+/* ---------- PROJECT ---------- */
 .project {
   border: 1px solid #eee;
-  padding: 20px;
+  padding: 24px;
+  border-radius: 10px;
   margin-top: 20px;
-  border-radius: 8px;
+  transition: all .25s ease;
 }
 
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* ---------- SKILLS ---------- */
 .skills span {
-  display:inline-block;
-  margin:5px;
-  padding:6px 10px;
-  background:#f3f3f3;
-  border-radius:6px;
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 12px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+  border-top: 1px solid #eee;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <a href="#about">About</a>
+  <a href="#project">Project</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <section class="hero">
   <h1>추예진</h1>
   <p class="subtitle">Backend Developer · Spring Boot · AWS</p>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#project">Project</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-  Spring Boot 기반 서비스 개발을 경험하며
-  API 설계와 문제 해결에 집중하는 백엔드 개발자입니다.
+    Spring Boot 기반 백엔드 개발을 중심으로
+    API 설계, 인증 구조, 서비스 흐름 구현에 집중하는 개발자입니다.
   </p>
 </section>
 
@@ -83,10 +122,16 @@ nav a {
 
   <div class="project">
     <h3>HOSPIN (Capstone Project)</h3>
-    <p><b>Problem:</b> 인증 구조와 도메인 흐름 설계 필요</p>
-    <p><b>Solution:</b> JWT 인증 구조 구현, REST API 설계, AWS EC2 배포</p>
-    <p><b>Result:</b> 안정적인 API 구조 구축 및 서비스 흐름 완성</p>
+    <p><b>Problem</b> : 의료 서비스 흐름 기반 도메인 설계 필요</p>
+    <p><b>Solution</b> : JWT 인증 구조 + REST API + AWS EC2 배포</p>
+    <p><b>Result</b> : 실제 서비스 수준의 API 구조 구축</p>
   </div>
+
+  <div class="project">
+    <h3>BookHabit</h3>
+    <p>독서 습관 형성 서비스 (Spring Boot + Calendar UI)</p>
+  </div>
+
 </section>
 
 <section id="skills">
@@ -96,6 +141,8 @@ nav a {
     <span>Spring Boot</span>
     <span>JPA</span>
     <span>MySQL</span>
+    <span>Spring Security</span>
+    <span>JWT</span>
     <span>AWS EC2</span>
   </div>
 </section>
@@ -103,8 +150,12 @@ nav a {
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
-  <p>GitHub: github.com/yourid</p>
+  <p>GitHub: github.com/chuyejinn</p>
 </section>
+
+<footer>
+  © 2026 Yejin Chu
+</footer>
 
 </body>
 </html>
