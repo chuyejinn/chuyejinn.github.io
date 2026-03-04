@@ -182,18 +182,12 @@ margin-bottom:16px;
 color:var(--muted);
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(12,1fr);
-gap:14px;
-}
-
 .card{
-grid-column:span 12;
 border:1px solid var(--line);
 border-radius:var(--radius);
 padding:18px;
 background:var(--card);
+margin-bottom:20px;
 }
 
 .row{
@@ -241,7 +235,6 @@ border-top:1px solid var(--line);
 @media (min-width:860px){
 .meta-row{grid-template-columns:1fr 1fr;}
 .two-col{grid-template-columns:1fr 1fr;}
-.card.span6{grid-column:span 6;}
 .kpi{grid-template-columns:1fr 1fr 1fr;}
 }
 
@@ -265,9 +258,7 @@ border-top:1px solid var(--line);
 </div>
 
 <header class="hero">
-
 <div class="container">
-
 <div class="hero-card">
 
 <div class="hero-top">
@@ -282,13 +273,13 @@ Backend Developer · Spring Boot · AWS
 
 Spring Boot 기반 백엔드 개발자로  
 <b>JWT 인증/인가</b>, <b>도메인 모델링</b>, <b>REST API 설계</b>를 중심으로  
-복잡한 서비스 흐름을 안정적인 서버 구조로 구현합니다.
+안정적이고 유지보수 가능한 서버 구조를 구현합니다.
 
 <br><br>
 
 의료 예약·진료 기록 도메인을 모델링한 <b>HOSPIN 프로젝트</b>에서  
 JWT 인증 처리 속도를 약 <b>30% 개선</b>하고  
-API 구조 재설계와 AWS 배포까지 직접 수행했습니다.
+API 구조 재설계와 <b>AWS EC2/RDS 기반 배포</b>까지 직접 수행했습니다.
 
 </p>
 
@@ -338,13 +329,12 @@ Java / Spring Boot Backend · REST API · AWS · JWT
 </header>
 
 <section id="about" class="divider">
-
 <div class="container">
 
 <h2>About Me</h2>
 
 <p class="lead">
-채용 담당자가 어떤 개발자인지 빠르게 이해할 수 있도록 정리했습니다.
+백엔드 개발자로서의 핵심 역량과 프로젝트 경험을 정리했습니다.
 </p>
 
 <div class="two-col">
@@ -404,18 +394,12 @@ EC2 / RDS 환경 구성 및 서버 배포
 </div>
 
 </div>
-
 </section>
 
 <section id="projects" class="divider">
-
 <div class="container">
 
 <h2>Projects</h2>
-
-<p class="lead">
-성과 / 문제 해결 / 역할 중심으로 정리했습니다.
-</p>
 
 <div class="card">
 
@@ -440,58 +424,28 @@ HOSPIN · AI 기반 의료 서비스 플랫폼
 
 <div class="item">
 <b>JWT 인증 성능 개선</b>
-<p>
-0.7s → 0.5s (약 30% 개선)
-</p>
+<p>0.7s → 0.5s (약 30% 개선)</p>
 </div>
 
 <div class="item">
 <b>API 구조 개선</b>
-<p>
-불필요한 엔드포인트 약 20% 감소
-</p>
+<p>불필요한 엔드포인트 약 20% 감소</p>
 </div>
 
 <div class="item">
 <b>시스템 안정성</b>
-<p>
-테스트 환경 기준 API 장애율 0%
-</p>
+<p>테스트 환경 기준 API 장애율 0%</p>
 </div>
-
-</div>
-
-<div style="margin-top:14px;">
-
-<b>트러블슈팅</b>
-
-<ul>
-
-<li>
-예약 트랜잭션 처리 중 동시 요청 환경에서 데이터 충돌 발생<br>
-→ 트랜잭션 흐름 및 DB 동작 분석<br>
-→ 안정적인 예약 처리 구조로 개선
-</li>
-
-</ul>
 
 </div>
 
 <div class="row" style="margin-top:14px;">
 
 <a class="btn primary"
-href="https://github.com/chuyejinn/hospin-project/tree/backend/feature-login-api/backend"
+href="https://github.com/chuyejinn/hospin-project"
 target="_blank">
 
-Repository (Backend)
-
-</a>
-
-<a class="btn secondary"
-href="https://www.notion.so/API-20321ca9f3b2807087e3db6a27287cac"
-target="_blank">
-
-API Specification
+Repository
 
 </a>
 
@@ -499,12 +453,44 @@ API Specification
 
 </div>
 
+<div class="card">
+
+<h3>
+Festival MBTI Web · 축제 체험형 웹 서비스
+</h3>
+
+<div class="row">
+
+<span class="chip">HTML</span>
+<span class="chip">CSS</span>
+<span class="chip">JavaScript</span>
+<span class="chip">Mobile UI</span>
+
 </div>
 
+<p>
+강남대학교 축제 부스에서 실제 운영된 MBTI 체험형 웹 서비스입니다.<br>
+QR코드를 통해 접속하여 MBTI 테스트를 진행하고 결과를 확인할 수 있도록 구현했습니다.
+</p>
+
+<div class="row">
+
+<a class="btn primary"
+href="https://github.com/chuyejinn/festival-mbti-web"
+target="_blank">
+
+Repository
+
+</a>
+
+</div>
+
+</div>
+
+</div>
 </section>
 
 <section id="skills" class="divider">
-
 <div class="container">
 
 <h2>Skills</h2>
@@ -543,11 +529,9 @@ Infra / Collaboration
 </div>
 
 </div>
-
 </section>
 
 <section id="contact" class="divider">
-
 <div class="container">
 
 <h2>Contact</h2>
@@ -571,7 +555,6 @@ github.com/chuyejinn
 </div>
 
 </div>
-
 </section>
 
 <footer>
